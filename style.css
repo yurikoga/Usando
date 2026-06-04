@@ -1,0 +1,73 @@
+:root {
+    --bg-dark: #212529;
+    --text-color: #ced4da;
+    /* Sombras Dark Neumorphic */
+    --shadow-light: rgba(255, 255, 255, 0.05);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.keyboard-container {
+    background-color: var(--bg-dark);
+    padding: 40px;
+    border-radius: 20px;
+    width: 750px;
+}
+
+/* Efeito Elevado */
+.neu-raised {
+    box-shadow: 8px 8px 16px var(--shadow-dark), 
+               -4px -4px 12px var(--shadow-light);
+}
+
+/* Efeito Pressionado (para o JS) */
+.neu-pressed {
+    box-shadow: inset 6px 6px 12px var(--shadow-dark), 
+               inset -3px -3px 8px var(--shadow-light) !important;
+}
+
+.keyboard {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.key {
+    background-color: var(--bg-dark);
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    user-select: none;
+}
+
+.key.space {
+    width: 60%;
+    margin-top: 10px;
+}
+
+.key:hover {
+    color: #fff;
+}
